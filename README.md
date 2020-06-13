@@ -41,6 +41,9 @@ file_urls =['E:/Research/Web-Crawlers-For-Corona-Data-Collection/Newspapers/Guar
 paper_country_list = ['UK']
 paper_name_list = ['Guardian']
 ```
-* Now run the script 'informationExtraction.bat'. From provided csv file's link, it will extract the corona related newses based on the keywords provided in 'Keywords.csv' file. 
+* Now run the script 'informationExtraction.bat'. From provided csv file's link, it will extract the corona related newses based on the keywords provided in 'Keywords.csv' file. Update it, if you want to change the keywords. 
+* If all the corona related news extracted from the csv file's link (which you set), you can clear the csv file before next use so that repeated information are not extracted again. The complete extracted information will be saved into project's home directory's 'Extracted Information.csv' file. Feel free to use this file. 
+
+
 
 
