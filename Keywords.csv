@@ -1,79 +1,89 @@
-corona
-coronavirus
-covid19
-covid-19
-technology
-science
-policy
-app
-lockdown
-prevention
-tech
-machine
-isolation
-quarentine
-economy
-poverty
-death
-cases
-recovered
-action
-robot
-curve
-statistics
-analysis
-health
-machine-learning
-unemployment
-education
-institution
-shutdown
-travel
-ban
-mask
-sanitizer
-ppe
-wash
-hands
-social distancing
-pandemic
-epidemic
-virus
-influenza
-medicine
-success
-antibody
-outbreak
-vaccines
-drugs
-computer
-personal protective equipement
-icu
-medical team
-doctor
-nurse
-computer scientists
-statistics
-artifical intelligence
-big data
-fever
-job 
-profession
-garments
-industry
-school
-college
-university
-workers
-starvation
-relief
-food distribution
-breakdown
-flatten
-application
-graphs
-linear
-logarithmic
-price
-product
-food
+word,category
+action,policy
+analysis,technology
+antibody,health
+app,technology
+application,technology
+artifical intelligence,technology
+ban,policy
+big data,technology
+breakdown,technology
+cases,crisis
+college,education
+computer,technology
+computer scientists,technology
+corona,corona
+coronavirus,corona
+covid19,corona
+covid-19,corona
+curve,technology
+data,technology
+death,crisis
+doctor,health
+drugs,health
+economy,crisis
+education,education
+epidemic,corona
+fever,health
+flatten,technology
+food,health
+food distribution,policy
+garments,policy
+graphs,technology
+hands,health
+health,health
+icu,health
+industry,policy
+influenza,health
+institution,education
+isolation,policy
+job,policy
+jobless,crisis
+linear,technology
+lockdown,policy
+logarithmic,technology
+machine,technology
+machine-learning,technology
+mask,health
+medical team,health
+medicine,health
+mobile app,technology
+mobile application,technology
+nurse,health
+outbreak,crisis
+pandemic,crisis
+personal protective equipement,health
+policy,policy
+poverty,crisis
+ppe,health
+prediction,technology
+prevention,policy
+price,crisis
+product,crisis
+profession,policy
+quarentine,policy
+recovered,crisis
+relief,policy
+researcher,technology
+robot,technology
+sanitizer,health
+school,education
+science,technology
+scientist,technology
+scientists,technology
+shutdown,policy
+social distancing,policy
+starvation,crisis
+statistics,technology
+statistics,technology
+success,policy
+tech,technology
+technology,technology
+travel,policy
+unemployment,crisis
+university,education
+vaccines,health
+virus,corona
+wash,health
+word,category
+workers,policy

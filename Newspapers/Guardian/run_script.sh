@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Running Script"
-javac NewYorkTimes.java
-java NewYorkTimes
+javac Guardian.java
+java Guardian
 /bin/bash
