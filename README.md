@@ -1,5 +1,9 @@
 # Web-Crawlers-For-Corona-Data-Collection
-This repository is developed for the collection of corona related data from newspaper, web pages, important articles through diffrent types of crawlers. Main goal is to collect and visualize COVID-19 related information appeared in different sources. 
+This repository is developed for the collection of corona related data from newspaper, web pages, important articles through diffrent types of crawlers. Main goal is to collect and visualize COVID-19 related information appeared in different sources. Currently we include the crawleres for the following papers. 
+
+* The Guardian 
+* The New York Times 
+* The Prothom Alo 
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine.
