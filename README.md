@@ -3,7 +3,7 @@ This repository is developed for the collection of corona related data from news
 
 * The Guardian 
 * The New York Times 
-* The Prothom Alo (underdeveloped)
+* The Prothom Alo (currently under development)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine.
