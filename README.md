@@ -28,6 +28,19 @@ git clone https://github.com/rizveeerprojects/Web-Crawlers-For-Corona-Data-Colle
 ## Running the Crawlers 
 
 * Go to your desired newspaper folder(Guardian, New-York-Times etc.) 
-* Within your folder, you will get a script file. Run it. Newspaper crawling will start. All sorts of news related to coronavirus will be saved into respective csv file. 
+* Within your folder, you will get a script(.bat) file. Run it. Newspaper crawling will start. All sorts of news of the respective newspaper will be saved into the respective csv file in your current folder. 
+* In the file "processed_dates.txt", we keep the dates of which the crawler collected all the newses. So, for each run of the script our crawler first collects all the news from current day up to the last day stored into the file.
+* In the '.java' file, there is a variable named 'number_of_backward_days'. The value of this variable is currently set to 10. It means that from the oldest day saved into the "processed_dates.txt" file, our crawler runs and collects more 10 days newses previous to this date. You can increase the variable to collect more old newses. 
+```
+number_of_backward_days=10; //change this if you want to collect more old days newses
+```
+* After extracting the newses and saving them into respective csv file, return to the home directory of the project. 
+* In 'InformationExtraction.py' file, in line 31, you will provide the respective csv file's path link. 
+```
+file_urls =['E:/Research/Web-Crawlers-For-Corona-Data-Collection/Newspapers/Guardian/guardian_data_news_data.csv']
+paper_country_list = ['UK']
+paper_name_list = ['Guardian']
+```
+* Now run the script 'informationExtraction.bat'. From provided csv file's link, it will extract the corona related newses based on the keywords provided in 'Keywords.csv' file. 
 
 
