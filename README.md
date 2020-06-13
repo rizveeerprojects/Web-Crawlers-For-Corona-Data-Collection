@@ -4,7 +4,15 @@ This repository is developed for the collection of corona related data from news
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine.
 
+
+### Prerequisites
+The requirements and commands to run and install this project are given following - 
+
 ```
-git clone 
+Java Version 14
+```
+
+```
+git clone https://github.com/rizveeerprojects/Web-Crawlers-For-Corona-Data-Collection.git
 ```
 
