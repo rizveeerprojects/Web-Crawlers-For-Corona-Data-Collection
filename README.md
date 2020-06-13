@@ -25,3 +25,9 @@ Create a directory and go there. Open your terminal and type the following comma
 git clone https://github.com/rizveeerprojects/Web-Crawlers-For-Corona-Data-Collection.git
 ```
 
+## Running the Crawlers 
+
+* Go to your desired newspaper folder(Guardian, New-York-Times etc.) 
+* Within your folder, you will get a script file. Run it. Newspaper crawling will start. All sorts of news related to coronavirus will be saved into respective csv file. 
+
+
