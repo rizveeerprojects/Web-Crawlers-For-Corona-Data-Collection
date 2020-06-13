@@ -12,6 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 The requirements to run this project are given following - 
 ```
+Windows 7,8,10.
+```
+```
 Java Version 14
 ```
 ```
