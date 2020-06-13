@@ -15,6 +15,8 @@ Python Version 3.x; x>=6
 ```
 
 ### Installation
+Create a directory and go there. Open your terminal and type the following command. If you are not comfortable with using terminal, please download this repository as zip from the above option and unzip it within the created directory.
+
 ```
 git clone https://github.com/rizveeerprojects/Web-Crawlers-For-Corona-Data-Collection.git
 ```
