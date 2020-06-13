@@ -6,12 +6,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 
 ### Prerequisites
-The requirements and commands to run and install this project are given following - 
-
+The requirements to run this project are given following - 
 ```
 Java Version 14
 ```
+```
+Python Version 3.x; x>=6
+```
 
+### Installation
 ```
 git clone https://github.com/rizveeerprojects/Web-Crawlers-For-Corona-Data-Collection.git
 ```
