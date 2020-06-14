@@ -51,7 +51,7 @@ paper_name_list = ['Guardian']
 * **[Redwan Ahmed Rizvee](https://www.facebook.com/profile.php?id=100007730446852)**
 
 ## Acknowledgments
-This is an ongoing research project to collect data related to the novel coronavirus appearing in the newspapers of different countries. Feel free to provide your suggestions and comments. For any issue please mail [rizveeredwan.csedu@gmail.com](https://www.linkedin.com/in/redwan-ahmed-rizvee-303b68133/). 
+This is an ongoing research project to collect data related to the novel coronavirus appearing in the newspapers of different countries. Feel free to provide your suggestions and comments. For any issue please mail at [rizveeredwan.csedu@gmail.com](https://www.linkedin.com/in/redwan-ahmed-rizvee-303b68133/). 
 
 
 
