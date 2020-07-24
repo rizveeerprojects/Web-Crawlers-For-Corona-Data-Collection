@@ -2,3 +2,4 @@ https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-pytho
 https://topix.io/tutorial/tutorial.html
 https://towardsdatascience.com/nlp-for-beginners-cleaning-preprocessing-text-data-ae8e306bef0f
 https://pypi.org/project/geograpy/
+https://www.dataquest.io/blog/web-scraping-beautifulsoup/

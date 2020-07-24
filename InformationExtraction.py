@@ -16,17 +16,17 @@ for i in list:
 
 ################# Getting the keywords ############################
 word_tag_map={}
-with open('Keywords.csv','r') as file:
+with open('Keywords-zaber-sir.csv','r') as file:
     csv_lines = csv.DictReader(file)
     for row in csv_lines:
-        word = row['word'].strip().lower()
-        category = row['category'].strip().lower()
+        word = row['Word'].strip().lower()
+        category = row['Category'].strip().lower()
         word_tag_map[word]=category
 
 from nltk.corpus import stopwords
-from nltk.tokenize import RegexpTokenizer
+#from nltk.tokenize import RegexpTokenizer
 from nltk.stem import WordNetLemmatizer
-from nltk.stem.porter import PorterStemmer
+#from nltk.stem.porter import PorterStemmer
 
 file_urls =['E:/Research/Web-Crawlers-For-Corona-Data-Collection/Newspapers/Guardian/guardian_data_news_data.csv']
 paper_country_list = ['UK']
