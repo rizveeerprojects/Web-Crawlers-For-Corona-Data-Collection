@@ -5,6 +5,8 @@ from Newspapers.Publico.Publico import Publico
 from Newspapers.Expresso.Expresso import Expresso
 from Newspapers.ProthomAlo.ProthomAlo import ProthomAlo
 from Newspapers.ChinaDaily.ChinaDaily import ChinaDaily
+from Newspapers.HindustanTimes.HindustanTimes import HindustanTimes
+
 
 from CoronaRelatedTech import CoronaRelatedTech
 import datetime
@@ -80,12 +82,16 @@ class Main():
             china_daily = ChinaDaily(self.corona_related_tech,self.starting_date,self.number_of_days)
             print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
             china_daily.InitiateCrawling()
-
+        elif(newspaper_key == 'hindustan_times'):
+            self.corona_related_tech=CoronaRelatedTech('Hindustan Times','India','Keywords-zaber-sir.csv','english') ############
+            hindustan_times = HindustanTimes(self.corona_related_tech,self.starting_date,self.number_of_days)
+            print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
+            hindustan_times.InitiateCrawling()
 
 
 
 main_function = Main()
 #main_function.Start('guardian')
 #main_function.Start('publico')
-main_function.Start('china_daily')
+main_function.Start('hindustan_times')
 #main_function.Start('prothom_alo')
