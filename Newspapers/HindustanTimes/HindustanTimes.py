@@ -3,7 +3,9 @@ from requests import post,get
 import datetime
 import os, sys
 import json, sys
+import time
 
+#https://stackoverflow.com/questions/38489386/python-requests-403-forbidden
 
 global_try_parameter=20
 
@@ -33,15 +35,18 @@ class HindustanTimes:
 
         #news
         try:
-            news = html_soup.find_all('p', class_="storyDetail")
+            news = html_soup.find_all('div', class_="storyDetail")
+            #print(news)
+            news = news[0].find_all('p')
             text = ""
             for i in range(0,len(news)):
                 text = text + " " + news[i].text
         except Exception as e:
+            print(e)
             return headline,summary,False
         print(headline)
-        print(summary)
-        print(text)
+        #print(summary)
+        #print(text)
         return (headline,summary,text)
 
     def DotToSlashConversion(self,d):
@@ -59,10 +64,12 @@ class HindustanTimes:
 
     def FetchAllLinks(self,valid_dates):
         global global_try_parameter
-        count = 0
+        count = 1
         while True:
             count = count + 1
-            link = 'https://www.hindustantimes.com/search?q=corona+virus&pageno='+str(count)
+            #link = 'https://www.hindustantimes.com/search?q=corona+virus&pageno='+str(count)
+            link = 'https://www.hindustantimes.com/india-news/page/?pageno='+str(count)
+
             found = 0
             for i in range(0,global_try_parameter):
                 response = get(link,headers=self.headers)
@@ -71,6 +78,8 @@ class HindustanTimes:
                 if(response.status_code == 200):
                     found = 1
                     break
+                else:
+                    time.sleep(.5000)
             if(found == 0):
                 break
             html_soup = BeautifulSoup(response.text, 'html.parser')
@@ -80,6 +89,7 @@ class HindustanTimes:
             processed_dates = []
             for div in divs:
                 a_tags.append(div.find('a')['href'])
+            print(len(a_tags))
             span_tags = html_soup.find_all('span',class_='time-dt')
             for span in span_tags:
                 d = span.text
@@ -93,7 +103,9 @@ class HindustanTimes:
             break_status = True
             final_a_tags = []
             final_processed_dates = []
+            print(len(found_dates))
             for i in range(0,len(found_dates)):
+                print(found_dates[i])
                 if(found_dates[i] <= valid_dates[0] and found_dates[i] >= valid_dates[len(valid_dates)-1]):
                     print(found_dates[i],valid_dates[0],valid_dates[len(valid_dates)-1])
                     final_a_tags.append(a_tags[i])
@@ -108,7 +120,10 @@ class HindustanTimes:
                     print(final_a_tags[i])
                     headline, summary, news = self.CrawlEachPage(final_a_tags[i])
                     if(headline != False and summary != False and news != False):
+                        print(len(news))
                         break
+                    else:
+                        time.sleep(.500)
                 if(headline != False and summary != False and news != False):
                     self.corona_related_tech.Process(final_processed_dates[i], headline, summary, news, final_a_tags[i])
             if(break_status == True):
