@@ -5,7 +5,10 @@ from Newspapers.Publico.Publico import Publico
 from Newspapers.Expresso.Expresso import Expresso
 from Newspapers.ProthomAlo.ProthomAlo import ProthomAlo
 from Newspapers.ChinaDaily.ChinaDaily import ChinaDaily
+from Newspapers.Hindu.Hindu import Hindu
 from Newspapers.HindustanTimes.HindustanTimes import HindustanTimes
+from Newspapers.Dawn.Dawn import Dawn
+
 
 
 from CoronaRelatedTech import CoronaRelatedTech
@@ -82,9 +85,19 @@ class Main():
             china_daily = ChinaDaily(self.corona_related_tech,self.starting_date,self.number_of_days)
             print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
             china_daily.InitiateCrawling()
+        elif(newspaper_key == 'hindu'):
+            self.corona_related_tech=CoronaRelatedTech('Hindu','India','Keywords-zaber-sir.csv','english') ############
+            hindu = Hindu(self.corona_related_tech,self.starting_date,self.number_of_days)
+            print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
+            hindu.InitiateCrawling()
         elif(newspaper_key == 'hindustan_times'):
             self.corona_related_tech=CoronaRelatedTech('Hindustan Times','India','Keywords-zaber-sir.csv','english') ############
             hindustan_times = HindustanTimes(self.corona_related_tech,self.starting_date,self.number_of_days)
+            print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
+            hindustan_times.InitiateCrawling()
+        elif(newspaper_key == 'dawn'):
+            self.corona_related_tech=CoronaRelatedTech('Dawn','Pakistan','Keywords-zaber-sir.csv','english') ############
+            hindustan_times = Dawn(self.corona_related_tech,self.starting_date,self.number_of_days)
             print("Our crawler will start crawling from date ",self.starting_date, " and will take previous ",str(self.number_of_days)," days news articles data.")
             hindustan_times.InitiateCrawling()
 
@@ -93,5 +106,8 @@ class Main():
 main_function = Main()
 #main_function.Start('guardian')
 #main_function.Start('publico')
+#main_function.Start('hindu')
 main_function.Start('hindustan_times')
+#main_function.Start('expresso')
 #main_function.Start('prothom_alo')
+#main_function.Start('dawn')

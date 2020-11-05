@@ -3,9 +3,10 @@ from requests import get
 import datetime
 import os, sys
 import json, sys
+from requests.auth import HTTPBasicAuth
 
 
-global_try_parameter=20
+global_try_parameter=5
 
 class Publico:
     def __init__(self,corona_related_tech,starting_date,number_of_days):
@@ -17,7 +18,7 @@ class Publico:
 
     def CrawlEachPage(self,link):
         url = link
-        response = get(url)
+        response = get(url, auth=HTTPBasicAuth('costaesilva.elsa@gmail.com', 'Elsamorais2020'))
         html_soup = BeautifulSoup(response.text, 'html.parser')
         #headline
         try:

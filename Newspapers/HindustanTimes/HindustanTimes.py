@@ -14,9 +14,10 @@ class HindustanTimes:
         self.number_of_days = number_of_days
         self.global_saved_urls=[]
         self.baseUrl="http://newssearch.chinadaily.com.cn/"
+        self.headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0'}
 
     def CrawlEachPage(self, url):
-        response = get(url)
+        response = get(url,headers=self.headers)
         html_soup = html_soup = BeautifulSoup(response.text, 'html.parser')
         #headline
         try:
@@ -64,7 +65,9 @@ class HindustanTimes:
             link = 'https://www.hindustantimes.com/search?q=corona+virus&pageno='+str(count)
             found = 0
             for i in range(0,global_try_parameter):
-                response = get(link)
+                response = get(link,headers=self.headers)
+                print(link)
+                print(response)
                 if(response.status_code == 200):
                     found = 1
                     break
@@ -87,16 +90,18 @@ class HindustanTimes:
                 date_object = datetime.datetime(int(d[2]),int(month),int(d[1]))
                 found_dates.append(date_object)
                 processed_dates.append(d[1]+'/'+month+'/'+d[2])
-            break_status = False
+            break_status = True
             final_a_tags = []
             final_processed_dates = []
             for i in range(0,len(found_dates)):
                 if(found_dates[i] <= valid_dates[0] and found_dates[i] >= valid_dates[len(valid_dates)-1]):
+                    print(found_dates[i],valid_dates[0],valid_dates[len(valid_dates)-1])
                     final_a_tags.append(a_tags[i])
                     final_processed_dates.append(processed_dates[i])
+                    break_status = False
                 elif(found_dates[i]<valid_dates[len(valid_dates)-1]):
-                    break_status = True
-                    break
+                    continue
+
             for i in range(0,len(final_a_tags)):
                 headline, summary, news = "", "",""
                 for j in range(0,global_try_parameter):
